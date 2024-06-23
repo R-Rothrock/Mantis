@@ -1,0 +1,9 @@
+There's not much to show here, so this'll be quick!
+
+Firstly, we have `config.h`. This file is the configuration for both
+the controller and the controlee.
+
+Lastly, there's `cnc_server.c`. This is the controller for the malware.
+
+Dixi.
+

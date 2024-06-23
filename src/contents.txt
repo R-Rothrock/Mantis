@@ -1,0 +1,59 @@
+															A Primer
+- `auxiliary.*`: Learning about the environment.
+- `cpu.*`: Keeping track of CPU usage.
+- `persistence.*`: Being persistent in said environment.
+- `techniques.*`: Elevating privelidges.
+- `rootkit.*`: Rooting the kernel.
+- `cnc.*`: Commanding n' controlling the environment.
+- `propogation.*`: Spreading to other environments.
+- `signature.*`: Have a lovely chat with the REs.
+
+														 Auxiliary
+The very first goal of a malware is to be as self-aware as it can be.
+It needs to be able to look around and act regarding its surroundings
+accordingly. Good examples would be things like detectings an
+antivirus or checking whether `ptrace` can be used.
+
+																CPU
+We don't want to use too much CPU, because that would likely start
+investigation (as least it would on my computer.) We can match the
+current CPU usage on the system and use that data to learn how we can
+disguise our own CPU usage.
+
+														Persistence
+Utilizing Systemd, persistence can easily be established in a rather
+non-suspicious way.
+
+														 Techniques
+The fun part. Utilizing either the `ptrace` debugging interface or
+utilizing the `/proc` directory to make its own debugging system,
+Mantis waits patiently for someone to run Sudo. When sudo it called,
+it will attempt to either:
+a. Steal the credentials from the process's stack, then use them to
+escalate privelidges on its own.
+b. Kill the process and recreate itself under the same PID to escalate
+priviledges, utlizing the "Sudo grace" period.
+
+															Rootkit
+Once we're the root user, now the system can be rooted. Kernel modules
+can be inserted, syscalls can by highjacked, and complete control can
+be taken.
+
+																CNC
+Once control is taken, Mantis hands that control over to the CNC
+system for complete remote access. It does this by using either DNS
+or IMAP tunneling (never heard of the latter, yes? No, no you haven't)
+to communicate in secret.
+
+														Propogation
+Mantis uses its extended capabilities on a system to highjack and
+infect removeable storage devices. Not that this is a very effective
+method of propogation, but generally automated propogation isn't in
+the job description of a rootkit, so, honestly, idgaf go figure it
+out.
+
+														 Signature
+Share all your innermost thoughts and feelings. Mantis will take your
+message to the very ends of the world of priviledge escalation (and
+maybe a little farther.)
+

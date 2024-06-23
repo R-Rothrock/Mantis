@@ -1,0 +1,26 @@
+The embeds directory.
+
+These files will be embeded in the Mantis as files that can be created
+by the virus for whatever means. The build system will make them their
+equivalent header files (i.e. example.ko.c -> example.ko ->
+example.ko.h, though for things like service files we skip the first
+step (of course.))
+
+Manifest
+
+mantis_service_user.service
+
+When Mantis hasn't yet rooted the system, it waits patiently as a
+service. This is the equivalent service file.
+
+mantis_service_root.service
+
+Even though we intend on being a complete rootkit, nevertheless we
+will need our own service as root. This is the equivalent service
+file.
+
+mantis.ko.c
+
+A source for a kernel module that will be used to root the system,
+highjack syscalls, etc.
+
