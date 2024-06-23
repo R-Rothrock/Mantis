@@ -46,6 +46,13 @@ concept, except Mantis utilizes IMAP to exfiltrate data instead of
 DNS.
 
                               Building
+Hey, real quick, before you build:
+This project is under the `unlicense`, meaning I'm not liable for
+any/all immature stupidity you try (or, more correctly, try to do and
+fail) with my software. This isn't Hollywood; go read a book.
+
+With that out of the way...
+
 First, for 'production' compilation, you'll need to uncomment lines 9
 and 10 of `makefile`. Now you'll have to configure options in
 `src/CNC_host/config.h` to setup the CNC system. Now you can run
