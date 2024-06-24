@@ -65,3 +65,8 @@ int check_mantis(void)
 	// TODO
 }
 
+int check_kmod_rules(void)
+{
+	// TODO
+}
+

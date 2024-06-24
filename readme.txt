@@ -29,8 +29,8 @@ red flags.
 Mantis has been given the tools it needs to attempt to root a system.
 It has two methods of doing this, each utilizing the user Mantis is
 running as running Sudo. Once Mantis manages to escalate priviledges,
-it disables any antiviruses on the system, establishes persistence as
-root, and highjacks a handful of syscalls, making it near impossible
+it disables any antiviruses on the system, loads itself into the
+kernel, and highjacks a handful of syscalls, making it near impossible
 to remove from a system.
 
                             Propogation

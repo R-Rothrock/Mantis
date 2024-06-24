@@ -17,9 +17,6 @@ int check_root(void);
 // Checks the Ptrace scope permissions.
 int check_ptrace_scope(void);
 
-// Checks if memfd_secret is enabled.
-int check_secretmem_enable(void);
-
 // Checks for internet access.
 int check_internet(void);
 
