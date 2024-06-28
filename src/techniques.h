@@ -18,8 +18,10 @@
 // because this points to the process itself, as opposed to another
 // process, which would be the case if we send something like SIGKILL.
 // As for the function itself, it won't return on success; it'll kill
-// itself instead. Therefore, this function will always return 0.
-int sudo_spoof(void);
+// itself instead. Therefore, this function will always return 0. Also
+// note, this function will just run... in saecula saeculorum
+// `program`: the program (Mantis) to execute as root.
+int sudo_spoof(const char *program);
 
 
 // As for the second techinque...
