@@ -1,8 +1,8 @@
 // propogation.h
-// We don't wants to be eradicated, do we?
 
 // Unfortunately, propogation doesn't work on Linux as much as it
-// would on Windows. Nevertheless, it certainly doesn't hurt to try.
+// would on Windows, due to there being less machines in the ether.
+// Nevertheless, it certainly doesn't hurt to try.
 
 #ifndef __PROPOGATION_H
 #define __PROPOGATION_H
