@@ -28,7 +28,7 @@ ifeq ($(strip_executable),true)
 endif
 
 cnc_server:
-	gcc src/CNC_host/cnc_server.c -o cnc_server
+	gcc src/cnc/cnc_server.c -o cnc_server
 
 mantis_service_user:
 	xxd -i src/embeds/mantis_service_user.service > src/embeds/mantis_service_user.service.h

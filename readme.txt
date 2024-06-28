@@ -55,7 +55,7 @@ With that out of the way...
 
 First, for 'production' compilation, you'll need to uncomment lines 9
 and 10 of `makefile`. Now you'll have to configure options in
-`src/CNC_host/config.h` to setup the CNC system. Now you can run
+`src/cnc/config.h` to setup the CNC system. Now you can run
 `make` and it will build both Mantis and the control server program.
 
 Dixi.

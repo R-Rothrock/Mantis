@@ -5,7 +5,7 @@
 #define __CNC_H
 
 // configurations
-#include "CNC_host/config.h"
+#include "cnc/config.h"
 
 // TODO
 
