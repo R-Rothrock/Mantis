@@ -25,15 +25,8 @@ Utilizing Systemd, persistence can easily be established in a rather
 non-suspicious way.
 
 														 Techniques
-The fun part. Utilizing either the `ptrace` debugging interface or
-utilizing the `/proc` directory to make its own debugging system,
-Mantis waits patiently for someone to run Sudo. When sudo it called,
-it will attempt to either:
-a. Steal the credentials from the process's stack, then use them to
-escalate privelidges on its own.
-b. Kill the process and recreate itself under the same PID to escalate
-priviledges, utlizing the "Sudo grace" period.
-
+The fun part. Instead of repeating myself, refer to `techniques.h` for
+details.
 															Rootkit
 Once we're the root user, now the system can be rooted. Kernel modules
 can be inserted, syscalls can by highjacked, and complete control can

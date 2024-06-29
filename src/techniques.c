@@ -8,13 +8,3 @@ int sudo_spoof(const char *program)
 	// TODO
 }
 
-int stack_logger_ptrace(void)
-{
-	// TODO
-}
-
-int stack_logger_wo_ptrace(void)
-{
-	// TODO
-}
-

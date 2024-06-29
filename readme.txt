@@ -25,13 +25,12 @@ Mantis utilizes simple systemd to gain persistence on a system. It's
 not overly creative, but it's standard enough that it won't raise any
 red flags.
 
-                        Rooting a System.
-Mantis has been given the tools it needs to attempt to root a system.
-It has two methods of doing this, each utilizing the user Mantis is
-running as running Sudo. Once Mantis manages to escalate priviledges,
-it disables any antiviruses on the system, loads itself into the
-kernel, and highjacks a handful of syscalls, making it near impossible
-to remove from a system.
+                        Rooting a System
+Man has the tools required to attempt to root a system. It does this
+by utilizing processes utilizing Sudo run under the same user. For
+specifics on the technique used, refer to `src/techniques.h`. Once
+Mantis manages to escalate priviledges, it loads itself into the
+kernel, and does, ya know, rootkit things.
 
                             Propogation
 Mantis has the ability to attempt to propogate via removable media.
@@ -57,6 +56,10 @@ First, for 'production' compilation, you'll need to uncomment lines 9
 and 10 of `makefile`. Now you'll have to configure options in
 `src/cnc/config.h` to setup the CNC system. Now you can run
 `make` and it will build both Mantis and the control server program.
+
+																Why?
+Instead of making a simple PoC, I wanted to attempt to implement all
+the things specified here. It's more fun that way.
 
 Dixi.
 
