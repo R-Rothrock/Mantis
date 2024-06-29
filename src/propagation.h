@@ -1,7 +1,7 @@
 // propogation.h
 
 // Unfortunately, propogation doesn't work on Linux as much as it
-// would on Windows, due to there being less machines in the ether.
+// would on Windows, due to there being less machines in the aether.
 // Nevertheless, it certainly doesn't hurt to try.
 
 #ifndef __PROPOGATION_H
